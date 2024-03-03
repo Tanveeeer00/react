@@ -34,34 +34,34 @@ function App() {
 
   return (
     <>
-      <div className="border border-white h-60 w-full">
-        <div className="font-extrabold font-serif text-3xl m-6">
+      <div className="border border-white/20 h-[23rem] w-[28rem] rounded-lg flex flex-col bg-sky-200">
+        <div className="font-extrabold font-serif text-3xl m-6 text-black/80">
           password generator
         </div>
 
-        <div className=" flex font-lg m-2 ">
+        <div className=" flex font-lg m-2">
           <input
             type="text"
             value={password}
             placeholder="PASSWORD"
             readOnly
-            className="border-white pl-2 h-10 w-full"
+            className="border-white pl-2 h-10 w-full bg-sky-100 text-black"
             ref={passwordRef}
           />
 
           <button
-            className="border-white ml-2 bg-gray-300 text-black h-10 flex items-center rounded-lg"
+            className="border-white/20 ml-2 bg-sky-900 text-gray-100 h-10 flex items-center rounded-lg"
             onClick={copyPasswordToClipBoard}
           >
             COPY
           </button>
         </div>
 
-        <div className=" flex flex-col float-left items-start">
-          <div>
+        <div className="flex flex-col float-left items-start pl-4">
+          <div className="pr-3 mb-3 bg-sky-400 text-gray-900 rounded-xl my-3">
             <input
               type="range"
-              className="m-2 ing-red-500 cursor-pointer"
+              className="m-2 cursor-pointer accent-sky-900"
               value={length}
               min={8}
               max={100}
@@ -71,7 +71,7 @@ function App() {
             />
             <label>LENGTH : {length}</label>
           </div>
-          <div className=" ">
+          <div className="mb-2 pr-3 bg-sky-400 text-gray-900 rounded-xl my-3">
             <input
               type="checkBox"
               defaultChecked={numbersAllowed}
@@ -83,7 +83,7 @@ function App() {
             />
             <label htmlFor="numberInput">NUMBER</label>
           </div>
-          <div className="float-left">
+          <div className="float-left bg-sky-400 text-gray-900 pr-3 rounded-xl my-3">
             <input
               type="checkBox"
               id="charInput"
